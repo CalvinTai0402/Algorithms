@@ -10,4 +10,4 @@ def isValidSubsequence(array, sequence):
 				break
 			else:
 				arrayPointer = arrayPointer + 1
-	return (i == len(sequence)-1) 
+	return True 
