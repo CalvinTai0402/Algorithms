@@ -1,6 +1,6 @@
 This is a summary of the space-time complexity of the popular data structures:
 
-1)Array
+1)Array (or list in Python)
 -Initialize:    O(N) S, O(N) T 
 -Get:           O(1) S, O(1) T
 -Set:           O(1) S, O(1) T

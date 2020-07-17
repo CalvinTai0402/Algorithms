@@ -12,7 +12,7 @@ def branchSums(root):
 	return branchSums
 	
 def getSums(node,sumSoFar,branchSums):
-	if node is None:
+	if node is None: # If one of the child nodes is missing, we simply return
 		return
 	sumSoFar = sumSoFar + node.value
 	if node.left is None and node.right is None:

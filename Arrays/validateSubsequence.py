@@ -1,4 +1,4 @@
-# Time: O(N), Space: O(1)
+# O(N) T O(1) S
 def isValidSubsequence(array, sequence):
 	arrayPointer = 0
 	for i in range(len(sequence)):
