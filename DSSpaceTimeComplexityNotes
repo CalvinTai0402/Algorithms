@@ -1,0 +1,11 @@
+This is a summary of the space-time complexity of the popular data structures:
+
+1)Array
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(1) T
+-Set:           O(1) S, O(1) T
+-Traverse:      O(1) S, O(N) T
+-Copy:          O(N) S, O(N) T
+-Insert:        O(1) S, O(N) T Why O(N) T? Recall that to insert, the OS has to copy the entire array, add 1 unit, then find some space for it.
+-Deletion:      O(1) S, O(N) T
+-Pop:           O(1) S, O(1) T Popping means removing an element at the end of an array.
