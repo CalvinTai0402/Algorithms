@@ -1,7 +1,7 @@
 # O(N^2) T O(1) S
 def moveElementToEnd(array, toMove):
     pointer = 0
-	while pointer < len(array): 
+    while pointer<len(array): 
 		if array[pointer]==toMove:
 			for i in range(pointer+1, len(array)):
 				if array[i]!=toMove:
