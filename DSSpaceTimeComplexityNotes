@@ -9,3 +9,17 @@ This is a summary of the space-time complexity of the popular data structures:
 -Insert:        O(1) S, O(N) T Why O(N) T? Recall that to insert, the OS has to copy the entire array, add 1 unit, then find some space for it.
 -Deletion:      O(1) S, O(N) T
 -Pop:           O(1) S, O(1) T Popping means removing an element at the end of an array.
+Strengths: Fast lookups, fast appends.
+Weakness: Costly insertion, costly deletion.
+
+1)Linked List
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(N) T
+-Set:           O(1) S, O(N) T
+-Traverse:      O(1) S, O(N) T
+-Copy:          O(N) S, O(N) T
+-Insert:        O(1) S, O(1) T # Strictly speaking an insertion is simply O(1). Its complexity is O(n) if you need to search for the position in which to insert the new node; but in most case a linked list is never used in a situation where a search is necessary.
+-Deletion:      O(1) S, O(1) T
+-Pop:           O(1) S, O(1) T # i.e., deletion at the end
+Strengths: Fast operations on the ends, flexible size.
+Weakness: Costly lookups.
