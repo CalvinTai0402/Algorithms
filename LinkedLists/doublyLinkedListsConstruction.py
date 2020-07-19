@@ -11,7 +11,7 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    
+
     # O(1) T O(1) S
     def setHead(self, node):
         if self.head is None:
@@ -19,7 +19,7 @@ class DoublyLinkedList:
             self.tail = node
             return
         self.insertBefore(self.head, node)
-        
+
     # O(1) T O(1) S
     def setTail(self, node):
         if self.tail is None:
@@ -39,7 +39,7 @@ class DoublyLinkedList:
         else:
             node.prev.next = nodeToInsert
         node.prev = nodeToInsert
-            
+
     # O(1) T O(1) S
     def insertAfter(self, node, nodeToInsert):
         # if nodeToInsert == self.head and nodeToInsert == self.tail:
@@ -55,7 +55,7 @@ class DoublyLinkedList:
 
     # O(p) T O(1) S, O(p)'s average O(N/2) = O(N)
     def insertAtPosition(self, position, nodeToInsert):
-        if position == 1:
+        if position == 1:  # We assume position starts at 1 not 0
             self.setHead(nodeToInsert)
             return
         node = self.head
@@ -84,14 +84,15 @@ class DoublyLinkedList:
         if node == self.tail:
             self.tail = self.tail.prev
         self.removePointers(node)
+
     # O(N) T O(1) S
     def containsNodeWithValue(self, value):
         tempNode = self.head
         while tempNode is not None and tempNode.value != value:
             tempNode = tempNode.next
         return tempNode is not None
-    
-    # O(1) T O(1) S            
+
+    # O(1) T O(1) S
     def removePointers(self, node):
         if node.next is not None:
             node.next.prev = node.prev
