@@ -8,7 +8,6 @@ This is a summary of the space-time complexity of the popular data structures:
 -Copy:          O(N) S, O(N) T
 -Insert:        O(1) S, O(N) T Why O(N) T? Recall that to insert, the OS has to copy the entire array, add 1 unit, then find some space for it.
 -Deletion:      O(1) S, O(N) T
--Pop:           O(1) S, O(1) T Popping means removing an element at the end of an array.
 Strengths: Fast lookups, fast appends.
 Weakness: Costly insertion, costly deletion.
 
@@ -20,11 +19,10 @@ Weakness: Costly insertion, costly deletion.
 -Copy:          O(N) S, O(N) T
 -Insert:        O(1) S, O(1) T # Strictly speaking an insertion is simply O(1). Its complexity is O(n) if you need to search for the position in which to insert the new node; but in most case a linked list is never used in a situation where a search is necessary.
 -Deletion:      O(1) S, O(1) T
--Pop:           O(1) S, O(1) T # i.e., deletion at the end
 Strengths: Fast operations on the ends, flexible size.
 Weakness: Costly lookups.
 
-2)Hash Table
+3)Hash Table
 -Initialize:    O(N) S, O(N) T 
 -Get:           O(1) S, O(1) T
 -Set:           O(1) S, O(1) T
@@ -32,6 +30,27 @@ Weakness: Costly lookups.
 -Copy:          O(N) S, O(N) T
 -Insert:        O(1) S, O(1) T # If the hash function gives uniformly distributed (most sophisticated ones do) hash values, then inserting is constant time
 -Deletion:      O(1) S, O(1) T
--Pop:           O(1) S, O(1) T # i.e., deletion at the end
 Strengths: Fast lookups. 
 Weakness: Unordered.
+
+4)Queue (implemented as a linked list, FIFO)
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(N) T
+-Set:           O(1) S, O(N) T
+-Traverse:      O(1) S, O(N) T
+-Copy:          O(N) S, O(N) T
+-Insert/enqueue:O(1) S, O(1) T # Insertion in front with a linked list is O(1) since we have a reference to the head.
+-Delete/dequeue:O(1) S, O(1) T # Deletion at the end with a linked list is O(1) since we have a reference to the tail.
+-Peek:          O(1) S, O(1) T # Peek at the next element to be dequeued.
+Strengths: Fast enqueue, dequeue, peek which are the most prominent operations of a stack data structure. 
+
+5)Stack (implemented as a dynamic array, LIFO)
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(N) T
+-Set:           O(1) S, O(N) T
+-Traverse:      O(1) S, O(N) T
+-Copy:          O(N) S, O(N) T
+-Insert/push:   O(1) S, O(1) T # Using dynamic arrays, pushing is mostly constant time. Sometimes when the stack needs to be resized, iy'llbe O(N), but O(1)'s amount dominates.
+-Deletion/pop:  O(1) S, O(1) T
+-Peek:          O(1) S, O(1) T # Peek at the next element to be popped.
+Strengths: Fast push, pop, peek which are the most prominent operations of a stack data structure. 
