@@ -12,7 +12,7 @@ This is a summary of the space-time complexity of the popular data structures:
 Strengths: Fast lookups, fast appends.
 Weakness: Costly insertion, costly deletion.
 
-1)Linked List
+2)Linked List
 -Initialize:    O(N) S, O(N) T 
 -Get:           O(1) S, O(N) T
 -Set:           O(1) S, O(N) T
@@ -23,3 +23,15 @@ Weakness: Costly insertion, costly deletion.
 -Pop:           O(1) S, O(1) T # i.e., deletion at the end
 Strengths: Fast operations on the ends, flexible size.
 Weakness: Costly lookups.
+
+2)Hash Table
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(1) T
+-Set:           O(1) S, O(1) T
+-Traverse:      N/A
+-Copy:          O(N) S, O(N) T
+-Insert:        O(1) S, O(1) T # If the hash function gives uniformly distributed (most sophisticated ones do) hash values, then inserting is constant time
+-Deletion:      O(1) S, O(1) T
+-Pop:           O(1) S, O(1) T # i.e., deletion at the end
+Strengths: Fast lookups. 
+Weakness: Unordered.
