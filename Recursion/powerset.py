@@ -17,7 +17,7 @@ def powersetRecursive(array, subArray, result):
         return
     else:
         for i in range(len(array)):
-            newArray = array[:i] + array[i + 1 :]
+            newArray = array[:i] + array[i + 1 :]  # Do not remove inplace
             if newArray not in result:
                 result.append(newArray)
             powersetRecursive(newArray, subArray, result)
