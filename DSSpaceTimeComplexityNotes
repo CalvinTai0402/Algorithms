@@ -54,3 +54,13 @@ Strengths: Fast enqueue, dequeue, peek which are the most prominent operations o
 -Deletion/pop:  O(1) S, O(1) T
 -Peek:          O(1) S, O(1) T # Peek at the next element to be popped.
 Strengths: Fast push, pop, peek which are the most prominent operations of a stack data structure. 
+
+6)String (in Python, it's implemented as an array and is immutable, in C++ it is mutable)
+-Initialize:    O(N) S, O(N) T 
+-Get:           O(1) S, O(1) T
+-Set:           N/A
+-Traverse:      O(1) S, O(N) T
+-Copy:          O(N) S, O(N) T
+-Insert/push:   N/A
+-Deletion/pop:  N/A
+Note: when we do something like += "x" in Python, we are actually copying the array of characters/integers and assigning them some space
