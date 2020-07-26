@@ -7,16 +7,18 @@ class BinaryTree:
 
 
 def branchSums(root):
-	branchSums=[]
-	getSums(root,0,branchSums)
-	return branchSums
-	
-def getSums(node,sumSoFar,branchSums):
-	if node is None: # If one of the child nodes is missing, we simply return
-		return
-	sumSoFar = sumSoFar + node.value
-	if node.left is None and node.right is None:
-		branchSums.append(sumSoFar)
-		return
-	getSums(node.left,sumSoFar,branchSums)
-	getSums(node.right,sumSoFar,branchSums)
+    branchSums = []
+    getSums(root, 0, branchSums)
+    return branchSums
+
+
+def getSums(node, sumSoFar, branchSums):
+    if node is None:
+        return
+    sumSoFar = sumSoFar + node.value
+    if node.left is None and node.right is None:
+        branchSums.append(sumSoFar)
+        return
+    getSums(node.left, sumSoFar, branchSums)
+    getSums(node.right, sumSoFar, branchSums)
+
