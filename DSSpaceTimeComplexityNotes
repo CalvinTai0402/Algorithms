@@ -64,3 +64,12 @@ Strengths: Fast push, pop, peek which are the most prominent operations of a sta
 -Insert/push:   N/A
 -Deletion/pop:  N/A
 Note: when we do something like += "x" in Python, we are actually copying the array of characters/integers and assigning them some space
+
+6)Graphs, V is vertices and E is edges
+-Initialize:    O(V+E) S, O(V+E) T 
+-Get:           O(1) S, O(V+E) T, using DFS/BFS
+-Set:           O(1) S, O(V+E) T, using DFS/BFS
+-Traverse:      O(1) S, O(V+E) T, using DFS/BFS
+-Copy:          O(V+E) S, O(V+E) T 
+-Insertion:     N/A
+-Deletion:      N/A
