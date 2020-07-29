@@ -44,7 +44,7 @@ Weakness: Unordered.
 -Peek:          O(1) S, O(1) T # Peek at the next element to be dequeued.
 Strengths: Fast enqueue, dequeue, peek which are the most prominent operations of a stack data structure. 
 
-5)Stack (implemented as a dynamic array, LIFO)
+5)Stack (implemented as a dynamic array, LIFO. In Python, a list is a dynamic array)
 -Initialize:    O(N) S, O(N) T 
 -Get:           O(1) S, O(N) T
 -Set:           O(1) S, O(N) T
