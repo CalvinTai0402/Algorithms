@@ -8,11 +8,15 @@ class BST:
 
 
 def validateBst(root):
-	return validateBstR(root, float("-inf"), float("inf"))
-	
+    return validateBstR(root, float("-inf"), float("inf"))
+
+
 def validateBstR(root, min, max):
-	if root is None:
-		return True
-	if root.value < min or root.value >= max:
-		return False
-	return validateBstR(root.left, min, root.value) and validateBstR(root.right, root.value, max)
+    if root is None:
+        return True
+    if root.value < min or root.value >= max:
+        return False
+    return validateBstR(root.left, min, root.value) and validateBstR(
+        root.right, root.value, max
+    )
+
