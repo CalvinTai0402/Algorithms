@@ -108,10 +108,8 @@ class BST:
                         node.value = tempNode.value
                         if tempParentNode.left == tempNode:
                             tempLeft = True
-                            tempRight = False
                         else:  # tempParentNode == tempNode
                             tempLeft = False
-                            tempRight = False
                         if tempLeft:
                             tempParentNode.left = tempNode.right
                         else:
