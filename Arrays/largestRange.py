@@ -1,28 +1,29 @@
 # O(NlogN) T O(1) S
 def largestRange(array):
-	i = 0
-	tempRange = 0
-	largestRange = 0
+    i = 0
+    tempRange = 0
+    largestRange = 0
     array.sort()
-	firstNum = array[0]
-	secondNum = array[0]
-	result = [firstNum,secondNum]
-	while i < len(array)-1:
-		if array[i] == array[i+1]-1:
-			tempRange += 1
-			secondNum = array[i+1]
-		elif array[i] == array[i+1]:
-			secondNum = array[i+1]
-		else:
-			tempRange = 0
-			firstNum = array[i+1]
-			secondNum = array[i+1]
-		if tempRange > largestRange:
-				largestRange = tempRange
-				result[0] = firstNum
-				result[1] = secondNum
-		i += 1
-	return result
+    firstNum = array[0]
+    secondNum = array[0]
+    result = [firstNum, secondNum]
+    while i < len(array) - 1:
+        if array[i] == array[i + 1] - 1:
+            tempRange += 1
+            secondNum = array[i + 1]
+        elif array[i] == array[i + 1]:
+            secondNum = array[i + 1]
+        else:
+            tempRange = 0
+            firstNum = array[i + 1]
+            secondNum = array[i + 1]
+        if tempRange > largestRange:
+            largestRange = tempRange
+            result[0] = firstNum
+            result[1] = secondNum
+        i += 1
+    return result
+
 
 # O(N) T O(N) S
 def largestRange2(array):
@@ -48,6 +49,5 @@ def largestRange2(array):
             right += 1
         if tempRange > largestRange:
             largestRange = tempRange
-            result = [left+1, right-1]
+            result = [left + 1, right - 1]
     return result
-        
