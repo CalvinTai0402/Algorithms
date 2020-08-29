@@ -2,7 +2,6 @@
 def maxSumIncreasingSubsequence(array):
     result = [0,[]]
 	maxSumSubsequence = array.copy()
-	maxSumSubsequence[0] = array[0]
 	indexArray = [None for i in range(len(array))]
 	for i in range(len(array)):
 		for j in range(i):
